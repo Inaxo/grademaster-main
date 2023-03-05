@@ -18,3 +18,17 @@
 .disclaimer{
     color: #c4c4c4 !important;
 }
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: #efefef !important;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbcbcb;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #c2c2c2;
+}
