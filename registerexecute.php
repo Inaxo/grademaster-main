@@ -54,7 +54,7 @@ if (isset($_POST['Register'])) {
         header("Location: register");
         exit();
     }
-    if (count($errors) == 0) {
+    if (!isset($_SESSION['error'])) {
         require_once 'config.php';
 
         $username = htmlspecialchars(strip_tags($username));
