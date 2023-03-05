@@ -1,0 +1,20 @@
+.window{
+    box-shadow: #eeeeee 0px 0px 20px;
+    border-radius: 12px !important;
+}
+.loginbutton{
+    border: 2px solid #f6b839;
+    background: transparent;
+    border-radius: 8px;
+    width: 130px;
+    height: 50px;
+    transition: 250ms;
+}
+.loginbutton:hover{
+    border: 2px solid #f6b839;
+    background: #f6b839;
+    border-radius: 7px;
+}
+.disclaimer{
+    color: #c4c4c4 !important;
+}
