@@ -130,6 +130,7 @@ header .image-text .profession{
 
 .sidebar header .image{
     display: flex;
+    margin-left: -6px;
     align-items: center;
     justify-content: center;
 }
@@ -273,6 +274,7 @@ body.dark .sidebar li a:hover .text{
     border-radius: 6px;
     background-color: var(--primary-color-light);
     position: relative;
+    margin-bottom: 20px;
     transition: var(--tran-05);
 }
 
