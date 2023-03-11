@@ -1,6 +1,9 @@
 <?php
 session_start();
-
+require_once "mysqldataprovider.php";
+if(!isset($_SESSION['logged'])){
+    header('Location: /grademaster');
+}
 
 ?>
 <!DOCTYPE html>
@@ -133,6 +136,47 @@ session_start();
     </div>
 
 </nav>
+<section class="home">
+    <div class="text">Kokpit</div>
+    <?php
+    $sql = "SELECT * FROM test WHERE idTeacher = :idTeacher";
+
+    $stmt = $db->prepare($sql);
+    $stmt->execute(array(':idTeacher' => $_SESSION['userId']));
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    if (count($result) > 0) {
+           foreach ($result as $row) {
+        echo "ID testu: " . $row['id'] . "<br>";
+        echo "Nazwa testu: " . $row['TestName'] . "<br>";
+        echo "ID nauczyciela: " . $row['idTeacher'] . "<br>";
+        echo "ID ucznia: " . $row['idStudent'] . "<br>";
+        echo "Data testu: " . $row['testDate'] . "<br>";
+        echo "Czas na test: " . $row['timeForTest'] . "<br>";
+        echo "Maksymalna liczba punktów: " . $row['maxscore'] . "<br>";
+        echo "Kod dołączenia: " . $row['joinCode'] . "<br><br>";
+    }
+
+} else {
+
+}
+
+
+    ?>
+    <div class="cardBox">
+        <div class="card">
+            <div>
+                <div class="numbers">0</div>
+                <div class="cardName">Uczniów</div>
+
+
+
+            </div>
+            <div class="iconBx">
+                <i class='bx bx-user'></i>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 

@@ -64,7 +64,7 @@ require_once 'mysqldataprovider.php';
                 echo '            <button class="login-btn" onclick="window.location.href=\'login\'">Zaloguj się</button>
             <button class="register-btn" onclick="window.location.href=\'register\'">Zarejestruj się</button>';
             }else{
-                echo '<button class="panel-btn" onclick="window.location.href="temp"">Panel</button>';
+                echo '<button class="panel-btn" onclick="window.location.href=\'panel\'">Panel</button>';
                 echo '<button class="logout-btn" onclick="window.location.href=\'logout\'">Wyloguj się</button>';
             }
             ?>
@@ -138,7 +138,7 @@ if (isset($_SESSION['alert']) && $_SESSION['alert'] == true) {
             if(!isset($_SESSION['logged'])){
                 echo '            <button class="register-section-btn" style="margin-left: 100px; onclick="window.location.href=\'register\'"">Załóż darmowe konto</button>';
             }else{
-                echo '            <button class="register-section-btn" style="margin-left: 100px; onclick="window.location.href=\'register\'"">Przejdź do panelu</button>';
+                echo '            <button class="register-section-btn" style="margin-left: 100px; onclick="window.location.href=\'panel\'"">Przejdź do panelu</button>';
             }
             ?>
 

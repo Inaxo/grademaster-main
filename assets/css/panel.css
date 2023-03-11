@@ -172,15 +172,14 @@ body.dark .sidebar header .toggle{
     grid-gap: 30px;
 }
 .cardBox .card{
-    height: 150px;
-    border-radius: 20px;
+    height: 170px;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     -webkit-box-shadow: 11px 8px 24px 5px rgba(66, 68, 90, 1);
-    -moz-box-shadow: 11px 8px 24px 5px rgba(66, 68, 90, 1);
-    box-shadow: 11px 8px 24px 5px rgba(66, 68, 90, 1);
+
     position: relative;
-    background: #c8d6db;
+    background: #fcfcfc;
 }
 .cardBox .card .numbers{
     font-weight: 1000;

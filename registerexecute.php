@@ -46,7 +46,7 @@ if (isset($_POST['Register'])) {
         header("Location: register");
         exit();
     }
-    $stmt = $db->prepare("SELECT COUNT(*) AS count FROM teacher WHERE email = ?");
+    $stmt = $db->prepare("SELECT * FROM teacher WHERE email = ?");
     $stmt->execute(array($email));
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     if($row['count'] > 0) {
@@ -72,7 +72,6 @@ if (isset($_POST['Register'])) {
         $_SESSION['alert2'] = true;
         exit();
     } else {
-        $_SESSION['errors'] = $errors;
 
         header("Location: register");
         exit();
