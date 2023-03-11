@@ -50,7 +50,7 @@ require_once 'mysqldataprovider.php';
                     <a class="nav-link" href="#">Zastosowanie</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">Cennik</a>
+                    <a class="nav-link" href="cennik">Cennik</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="#">Blog</a>

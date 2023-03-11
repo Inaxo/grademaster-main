@@ -130,6 +130,7 @@ header .image-text .profession{
 
 .sidebar header .image{
     display: flex;
+    margin-left: -6px;
     align-items: center;
     justify-content: center;
 }
@@ -272,6 +273,7 @@ body.dark .sidebar li a:hover .text{
     border-radius: 6px;
     background-color: var(--primary-color-light);
     position: relative;
+    margin-bottom: 20px;
     transition: var(--tran-05);
 }
 
@@ -404,4 +406,18 @@ body.dark .home .text{
         margin-top: 600px;
         margin-left: 10px;
     }
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: #efefef !important;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbcbcb;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #c2c2c2;
 }

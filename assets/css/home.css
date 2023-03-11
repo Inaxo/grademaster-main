@@ -298,12 +298,16 @@ h4{
     width: 40px;
 }
 
-
-
-
-
-
-
-
-
-
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: #efefef !important;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbcbcb;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #c2c2c2;
+}
