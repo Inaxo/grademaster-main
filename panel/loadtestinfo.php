@@ -1,9 +1,27 @@
 <?php
 session_start();
+
 require_once "../mysqldataprovider.php";
 if(!isset($_SESSION['logged'])){
     header('Location: /grademaster');
 }
+if(isset( $_GET['id']) && isset($_GET['aur'])){
+    if($idtrim = $_GET['id']){
+        $TestId= base64_decode($idtrim);
+        if($idUserTrim = $_GET['aur']){
+            $idUser= base64_decode($idUserTrim);
+        }
+    }
+}else{
+    http_response_code(405);
+    exit();
+}
+
+
+
+
+
+
 
 ?>
 
@@ -116,7 +134,7 @@ if(!isset($_SESSION['logged'])){
 
         <div class="bottom-content">
             <li class="">
-                <a href="logout.php">
+                <a href="../logout.php">
                     <i class='bx bx-log-out icon' ></i>
                     <span class="text nav-text">Wyloguj się</span>
                 </a>
@@ -171,4 +189,5 @@ if(!isset($_SESSION['logged'])){
         }
     });
 </script>
+<script src="../assets/js/main.js"></script>
 </body>

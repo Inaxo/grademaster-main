@@ -1,6 +1,10 @@
 <?php
 session_start();
 require_once 'mysqldataprovider.php';
+if (isset($_SESSION['logged'])) {
+    header('Location: /grademaster');
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pl">

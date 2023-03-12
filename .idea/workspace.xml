@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9009dc19-0ad2-4616-88dd-d2a7c2f29d3b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.htaccess.bak" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/panel.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/panel.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/googleapiprovider.php" beforeDir="false" afterPath="$PROJECT_DIR$/googleapiprovider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/loadtestinfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel/loadtestinfo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +93,8 @@
       <workItem from="1678546808415" duration="588000" />
       <workItem from="1678552230489" duration="5746000" />
       <workItem from="1678560039691" duration="124000" />
-      <workItem from="1678606622785" duration="4156000" />
+      <workItem from="1678606622785" duration="4716000" />
+      <workItem from="1678636871603" duration="2785000" />
     </task>
     <servers />
   </component>
@@ -116,8 +118,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/panel/home.php</url>
-          <line>149</line>
+          <line>152</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/panel/home.php</url>
+          <line>162</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

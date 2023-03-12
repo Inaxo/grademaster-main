@@ -3,6 +3,12 @@
 require_once 'mysqldataprovider.php';
 require_once "config.php";
 
+
+if (isset($_SESSION['logged'])) {
+    header('Location: /grademaster');
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pl">

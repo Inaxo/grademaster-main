@@ -98,6 +98,7 @@ for (let i = 0; i < popupButtons.length; i++) {
     const popupMenu = popupMenus[i];
 
     popupButton.addEventListener('click', () => {
+        event.stopPropagation()
         if (activeMenu !== popupMenu) {
             if (activeMenu !== null) {
                 activeMenu.style.display = 'none';

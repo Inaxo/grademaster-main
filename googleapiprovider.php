@@ -16,9 +16,11 @@ if(!isset($_SESSION['logged'])){
     $userData = array(
         'email' => $data['email'],
         'name' => $data['givenName'],
-        'surname' => $data['familyName']
+        'surname' => $data['familyName'],
+        'id' => $data['id']
     );
     $_SESSION['userData'] = $userData;
+    $_SESSION['userId'] = $userData['id'];
     $_SESSION['logged'] = true;
     $_SESSION['alert'] = true;
     header('Location: /grademaster');

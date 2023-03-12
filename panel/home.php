@@ -145,10 +145,14 @@ if(!isset($_SESSION['logged'])){
     $stmt->execute(array(':idTeacher' => $_SESSION['userId']));
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     if (count($result) > 0) {
+
         echo ' <div class="cardBox">';
         foreach ($result as $row) {
+            $encodedId = base64_encode($row["id"]);
+            $encodedaur = base64_encode($row["idTeacher"]);
             echo '
-<div class="card" data-id="'.$row['id'].'">
+
+<div class="card" data-id="'.$row['id'].'"  onclick="window.location.href=\'loadtestinfo.php?id='.$encodedId.'&aur='.$encodedaur.'\'">
   <div>
     <div class="card-title">'.$row['TestName'].'</div>
     <span class="date">'.$row['testDate'].'</span>
@@ -177,8 +181,6 @@ if(!isset($_SESSION['logged'])){
 
 
 </section>
-
-
 
 <script>
     const body = document.querySelector('body'),
