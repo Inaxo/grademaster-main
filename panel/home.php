@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "mysqldataprovider.php";
+require_once "../mysqldataprovider.php";
 if(!isset($_SESSION['logged'])){
     header('Location: /grademaster');
 }
@@ -37,7 +37,7 @@ if(!isset($_SESSION['logged'])){
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    <link rel="stylesheet" href="assets/css/panel.css">
+    <link rel="stylesheet" href="../assets/css/panel.css">
 
 
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -49,7 +49,7 @@ if(!isset($_SESSION['logged'])){
     <header>
         <div class="image-text">
                 <span class="image">
-                <img src="assets/img/logo.png">
+                <img src="../assets/img/logo.png">
                 </span>
 
 
@@ -114,7 +114,7 @@ if(!isset($_SESSION['logged'])){
 
         <div class="bottom-content">
             <li class="">
-                <a href="logout.php">
+                <a href="../logout">
                     <i class='bx bx-log-out icon' ></i>
                     <span class="text nav-text">Wyloguj się</span>
                 </a>
@@ -145,37 +145,37 @@ if(!isset($_SESSION['logged'])){
     $stmt->execute(array(':idTeacher' => $_SESSION['userId']));
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     if (count($result) > 0) {
-           foreach ($result as $row) {
-        echo "ID testu: " . $row['id'] . "<br>";
-        echo "Nazwa testu: " . $row['TestName'] . "<br>";
-        echo "ID nauczyciela: " . $row['idTeacher'] . "<br>";
-        echo "ID ucznia: " . $row['idStudent'] . "<br>";
-        echo "Data testu: " . $row['testDate'] . "<br>";
-        echo "Czas na test: " . $row['timeForTest'] . "<br>";
-        echo "Maksymalna liczba punktów: " . $row['maxscore'] . "<br>";
-        echo "Kod dołączenia: " . $row['joinCode'] . "<br><br>";
-    }
-
-} else {
-
-}
-
-
-    ?>
-    <div class="cardBox">
-        <div class="card">
-            <div>
-                <div class="numbers">0</div>
-                <div class="cardName">Uczniów</div>
-
-
-
-            </div>
-            <div class="iconBx">
-                <i class='bx bx-user'></i>
-            </div>
-        </div>
+        echo ' <div class="cardBox">';
+        foreach ($result as $row) {
+            echo '
+<div class="card" data-id="'.$row['id'].'">
+  <div>
+    <div class="card-title">'.$row['TestName'].'</div>
+    <span class="date">'.$row['testDate'].'</span>
+    <i class="bx bx-dots-horizontal-rounded popup-button"></i>
+    <div class="popup-menu">
+      <a href="#">Zduplikuj</a>
+      <a href="#" class="delete-button">Usuń</a>
     </div>
+    <div class="popup-confirm" style="display:none">
+      <p>Czy na pewno chcesz usunąć?</p>
+      <div class="popup-confirm-buttons">
+        <button class="confirm-button">Tak</button>
+        <button class="cancel-button">Nie</button>
+      </div>
+    </div>
+    <div class="card-description">'.$row['description'].'</div>
+  </div>
+  <i class="bx bxs-user card-amount" style="font-size: 25px;"></i>  
+  <p class="card-amount-2"> &nbsp;Ilość rozwiązujących: 0</p>
+</div>
+';
+        }
+
+
+}?>
+
+
 </section>
 
 
@@ -204,15 +204,15 @@ if(!isset($_SESSION['logged'])){
 
         if(body.classList.contains("dark")){
             modeText.innerText = "Light mode";
-            bgImage.src = "assets/img/logo-dark.png";
+            bgImage.src = "../assets/img/logo-dark.png";
         }else{
             modeText.innerText = "Dark mode";
-            bgImage.src = "assets/img/logo.png";
+            bgImage.src = "../assets/img/logo.png";
 
 
         }
     });
 </script>
-
+<script src="../assets/js/main.js"></script>
 </body>
 </html>

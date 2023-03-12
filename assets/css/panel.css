@@ -164,33 +164,77 @@ body.dark .sidebar header .toggle{
     color: var(--text-color);
 }
 .cardBox{
-    height: 150px;
+    height: 200px;
     position: relative;
     width: 100%;
     padding: 20px;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(3 ,2fr);
     display: grid;
     grid-gap: 30px;
 }
-.cardBox .card{
-    height: 170px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    -webkit-box-shadow: 11px 8px 24px 5px rgba(66, 68, 90, 1);
+.cardBox .card:hover{
+    -webkit-box-shadow: inset 1px 0px 24px -14px rgba(66, 68, 90, 1);
+    -moz-box-shadow: inset 1px 0px 24px -14px rgba(66, 68, 90, 1);
+    box-shadow: inset 1px 0px 24px -14px rgba(66, 68, 90, 1);
+    cursor: pointer;
 
-    position: relative;
-    background: #fcfcfc;
 }
-.cardBox .card .numbers{
-    font-weight: 1000;
-
-    margin-left: 70px;
-    margin-top: 30px;
+.cardBox .card{
+    transition: 0.4s;
+border-radius: 10px;
+    height: 200px;
+    position: relative;
+    background:#ffffff;
+}
+.cardBox .card .card-title{
+    font-weight: 600;
+    margin-bottom: 20px;
+display: inline-block;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 15px;
     position: relative;
     font-weight: 500;
-    font-size: 2.5em;
+    font-size: 22px;
     color: rgb(14, 14, 14);
+}
+.card {
+    position: relative;
+}
+
+.card .bx-dots-horizontal-rounded {
+    transition: 0.3s;
+    color: #7d7c7c;
+    position: absolute;
+    font-size: 30px;
+    top: 20px;
+    right: 20px;
+}
+.card .bx-dots-horizontal-rounded:hover{
+    color: black;
+}
+
+.date{
+    margin-bottom: 15px;
+}
+.card-description{
+    font-size: 14px;
+    margin-top: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #7d7c7c;
+}
+.card-amount-2{
+    position: absolute;
+    bottom: 10px;
+    padding-right: 15px;
+    left: 50px;
+}
+.card-amount{
+    position: absolute;
+    bottom: 10px;
+    padding-right: 15px;
+    left: 20px;
 }
 .cardBox .card .cardName{
 
@@ -294,7 +338,6 @@ body.dark .mode .sun-moon i.sun{
 body.dark .mode .sun-moon i.moon{
     opacity: 0;
 }
-
 .menu-bar .bottom-content .toggle-switch{
     position: absolute;
     right: 0;
@@ -339,7 +382,7 @@ body.dark .switch::before{
     left: 250px;
     height: 100vh;
     width: calc(100% - 250px);
-    background-color: var(--body-color);
+    background-color: #f1f5f8;
     transition: var(--tran-05);
 }
 .home .text{
@@ -387,6 +430,13 @@ body.dark .home .text{
     background-color: #fff;
     width: 100%;
 }
+.a-te{
+    color: #7d7c7c !important;
+
+}
+.a-te:hover{
+   color:#7d7c7c; !important;
+}
 .container-og .card-og .card-img{
     margin-top: 50px;
 }
@@ -420,4 +470,33 @@ body.dark .home .text{
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #c2c2c2;
+}
+
+.popup-button {
+    color: #7d7c7c;
+    position: absolute;
+    font-size: 30px;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+.popup-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+.popup-menu a {
+    display: block;
+    padding: 5px;
+    color: #333;
+    text-decoration: none;
+}
+
+.popup-menu a:hover {
+    background-color: #f0f0f0;
 }

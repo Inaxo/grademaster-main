@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9009dc19-0ad2-4616-88dd-d2a7c2f29d3b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess.bak" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/panel.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/panel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel.php" beforeDir="false" afterPath="$PROJECT_DIR$/panel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registerexecute.php" beforeDir="false" afterPath="$PROJECT_DIR$/registerexecute.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +86,13 @@
       <workItem from="1678005418970" duration="5756000" />
       <workItem from="1678022328938" duration="1752000" />
       <workItem from="1678037795984" duration="2381000" />
-      <workItem from="1678527551382" duration="71000" />
+      <workItem from="1678527551382" duration="884000" />
+      <workItem from="1678532641094" duration="5454000" />
+      <workItem from="1678542745795" duration="3000" />
+      <workItem from="1678546808415" duration="588000" />
+      <workItem from="1678552230489" duration="5746000" />
+      <workItem from="1678560039691" duration="124000" />
+      <workItem from="1678606622785" duration="4156000" />
     </task>
     <servers />
   </component>
@@ -103,5 +110,16 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/panel/home.php</url>
+          <line>149</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

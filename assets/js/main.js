@@ -87,3 +87,50 @@
 
 
 })(jQuery);
+
+const popupButtons = document.querySelectorAll('.popup-button');
+const popupMenus = document.querySelectorAll('.popup-menu');
+
+let activeMenu = null;
+
+for (let i = 0; i < popupButtons.length; i++) {
+    const popupButton = popupButtons[i];
+    const popupMenu = popupMenus[i];
+
+    popupButton.addEventListener('click', () => {
+        if (activeMenu !== popupMenu) {
+            if (activeMenu !== null) {
+                activeMenu.style.display = 'none';
+            }
+            popupMenu.style.display = 'block';
+            activeMenu = popupMenu;
+        } else {
+            popupMenu.style.display = 'none';
+            activeMenu = null;
+        }
+    });
+
+    const deleteButton = popupMenu.querySelector('a:last-of-type');
+    deleteButton.addEventListener('click', (event) => {
+        const card = event.target.closest('.card');
+        const id = card.getAttribute('data-id');
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', '../tech/rem-v1010.php');
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onreadystatechange = function() {
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                console.log(this.responseText);
+                card.remove();
+                activeMenu = null;
+            }
+        };
+        xhr.send('id=' + encodeURIComponent(id));
+    });
+    document.addEventListener('click', (event) => {
+        const isClickInside = popupButton.contains(event.target) || popupMenu.contains(event.target);
+        if (!isClickInside) {
+            popupMenu.style.display = 'none';
+            activeMenu = null;
+        }
+    });
+}
