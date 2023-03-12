@@ -36,7 +36,7 @@ require_once 'mysqldataprovider.php';
 <nav class="navbar navbar-expand-xxl bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="/grademaster"><img src="assets/img/logo.png" class="logo"> </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="margin-right: 10px">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-top: 9px;">
@@ -47,8 +47,8 @@ require_once 'mysqldataprovider.php';
                 <li class="nav-item">
                     <a class="nav-link" href="#">Zastosowanie</a>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link active" href="#">Cennik</a>
+                <li class="nav-item">
+                    <a class="nav-link active" href="cennik">Cennik</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="#">Blog</a>
@@ -57,8 +57,16 @@ require_once 'mysqldataprovider.php';
                     <a class="nav-link " href="#">O nas</a>
                 </li>
             </ul>
-            <button class="login-btn">Zaloguj się</button>
-            <button class="register-btn">Zarejestruj się</button>
+            <?php
+            if(!isset($_SESSION['logged'])){
+                echo '            <button class="login-btn" onclick="window.location.href=\'login\'">Zaloguj się</button>
+            <button class="register-btn" onclick="window.location.href=\'register\'">Zarejestruj się</button>';
+            }else{
+                echo '<button class="panel-btn" onclick="window.location.href=\'panel\'">Panel</button>';
+                echo '<button class="logout-btn" onclick="window.location.href=\'logout\'">Wyloguj się</button>';
+            }
+            ?>
+
         </div>
     </div>
 </nav>

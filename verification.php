@@ -130,7 +130,7 @@ require_once "config.php";
                 <div class="window bg-light text-dark card">
                     <div class="card-body p-5 text-center">
                         <div class="mb-md-5 mt-md-3 pb-5">
-                            <img src="assets/img/logo.png">
+                            <a href="/grademaster"><img src="assets/img/logo.png"></a>
                             <hr>
                             <input type="hidden" name="username" value="<?php  echo $username;?>">
                             <input type="hidden" name="surname" value="<?php  echo $surname;?>">

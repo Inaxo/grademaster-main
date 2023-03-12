@@ -37,14 +37,14 @@ require_once 'mysqldataprovider.php';
 <body>
 <nav class="navbar navbar-expand-xxl bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="assets/img/logo.png" class="logo"> </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="/grademaster"><img src="assets/img/logo.png" class="logo"> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="margin-right: 10px">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-top: 9px;">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Strona główna</a>
+                    <a class="nav-link active" aria-current="page" href="/grademaster">Strona główna</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Zastosowanie</a>
@@ -64,7 +64,7 @@ require_once 'mysqldataprovider.php';
                 echo '            <button class="login-btn" onclick="window.location.href=\'login\'">Zaloguj się</button>
             <button class="register-btn" onclick="window.location.href=\'register\'">Zarejestruj się</button>';
             }else{
-                echo '<button class="panel-btn" onclick="window.location.href="temp"">Panel</button>';
+                echo '<button class="panel-btn" onclick="window.location.href=\'panel\'">Panel</button>';
                 echo '<button class="logout-btn" onclick="window.location.href=\'logout\'">Wyloguj się</button>';
             }
             ?>
@@ -125,10 +125,10 @@ if (isset($_SESSION['alert']) && $_SESSION['alert'] == true) {
 ?>
 <div id="container">
 
-    <div class="row justify-content-center text-center" style="margin-top: 20px; border-bottom: 1px solid gray"><div class="col-lg-5 col-md-12 mx-auto" style="margin-top: 80px; ">
+    <div class="row justify-content-center text-center" style="margin-top: 20px; border-bottom: 1px solid gray"><div class="col-lg-5 col-md-12 mx-auto" style="margin-top: 80px;">
             <p class="section-text" style="margin-left: 100px;" >
                 Twórz spersonalizowane <span style="color:
-#c7b52e;"> testy</span>, </br>udostępniaj je oraz kontroluj wyniki. Wszystko dzięki naszej platformie Grade<span style="color: #f6b839">Master </span>!
+#c7b52e;"> testy</span>, </br>udostępniaj je oraz kontroluj wyniki. Wszystko dzięki naszej platformie Grade<span style="color: #f6b839">Master</span>!
             </p>
             <p class="section-undertext" style="margin-left: 100px;" >
                 Opracowana przez nas platforma umożliwi Ci łatwą weryfikację wiedzy, </br> w każdym zakresie naukowym. Nasze autorskie algorytmy zapewnią tobie bezpieczeństwo i komfort w opracowywaniu i rozwiązywaniu testów online.
@@ -136,9 +136,9 @@ if (isset($_SESSION['alert']) && $_SESSION['alert'] == true) {
             <?php
 
             if(!isset($_SESSION['logged'])){
-                echo '            <button class="register-section-btn" style="margin-left: 100px; onclick="window.location.href=\'register\'"">Załóż darmowe konto</button>';
+                echo '            <button class="register-section-btn" style="margin-left: 100px;" onclick="window.location.href=\'register\'"">Załóż darmowe konto</button>';
             }else{
-                echo '            <button class="register-section-btn" style="margin-left: 100px; onclick="window.location.href=\'register\'"">Przejdź do panelu</button>';
+                echo '            <button class="register-section-btn" style="margin-left: 100px;" onclick="window.location.href=\'panel\'"">Przejdź do panelu</button>';
             }
             ?>
 

@@ -42,7 +42,7 @@ require_once "config.php";
                 <div class="window bg-light text-dark card">
                     <div class="card-body p-5 text-center">
                         <div class="mb-md-5 mt-md-3 pb-5">
-                            <img src="assets/img/logo.png">
+                            <a href="/grademaster"><img src="assets/img/logo.png"></a>
                             <hr>
                             <h4 class="fw-bold mb-2 text-uppercase mt-5 mb-3">Logowanie</h4>
                             <div class="form-outline form-black mb-3">
