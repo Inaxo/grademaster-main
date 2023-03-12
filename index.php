@@ -138,11 +138,7 @@ if (isset($_SESSION['alert']) && $_SESSION['alert'] == true) {
             if(!isset($_SESSION['logged'])){
                 echo '            <button class="register-section-btn" style="margin-left: 100px;" onclick="window.location.href=\'register\'"">Załóż darmowe konto</button>';
             }else{
-<<<<<<< HEAD
-                echo '            <button class="register-section-btn" style="margin-left: 100px; onclick="window.location.href=\'panel\'"">Przejdź do panelu</button>';
-=======
                 echo '            <button class="register-section-btn" style="margin-left: 100px;" onclick="window.location.href=\'panel\'"">Przejdź do panelu</button>';
->>>>>>> origin/main
             }
             ?>
 
